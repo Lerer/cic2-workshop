@@ -2,7 +2,7 @@
 
 In this section, you will setup your app to speak to the Auth0 Management API.
 
-    The Auth0 Management API is a collection of endpoints to complete administrative tasks programmatically and should be used by back-end servers or trusted parties.
+> _The Auth0 Management API is a collection of endpoints to complete administrative tasks programmatically and should be used by back-end servers or trusted parties._
 
 **Why do we need this?**
 In the app you are building, we will offer the ability for users to manage their team members. We will control this ability with Role Based Access Control. We'll come to that in a challenge.
@@ -23,13 +23,13 @@ In the app you are building, we will offer the ability for users to manage their
 ![](https://github.com/lerer/cic2-workshop/blob/main/images/001/mgmt-api-select.png?raw=true)
 
 
-5. Select `All` permissions and click `Authorize`. 
+5. Select `All` permissions and click `Authorize`.    
    **Important:exclamation:**: In a real project, you should only enable necessary permissions to the client. For today, we will keep it simple.
 
 ![](https://github.com/lerer/cic2-workshop/blob/main/images/001/auth-all.png?raw=true)
 
 
-6. Got to `Settings` tab and find the `Client ID` and `Client Secret`. 
+6. Go to `Settings` tab and find the `Client ID` and `Client Secret`.      
    :point_right: We will now copy these over to the Glitch App.⁠
 
 ![](https://github.com/lerer/cic2-workshop/blob/main/images/001/mgmt-api-client-details.png?raw=true)

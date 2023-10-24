@@ -1,4 +1,4 @@
-## 2.0 Intro
+## 2.0 Intro to Login UI Customization
 
 In this task, we will customize the login page     
 

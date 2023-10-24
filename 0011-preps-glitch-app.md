@@ -1,3 +1,5 @@
+## 1.1 Glitch app
+
 In this first task, we will use the Glitch platform to deploy a custom SPA to serve as the user interface (UI) for the learner. Once the SPA has been deployed, we'll move onto the next task where we will leverage Okta CIC's management console to set up the SPA in your CIC tenant.
 
 

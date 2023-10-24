@@ -14,7 +14,7 @@ Let’s get started!
 ### Create Custom MFA Policy as Action
 
 
-####1. In Okta CIC left navigation menu Actions section, click on Library
+#### 1. In Okta CIC left navigation menu Actions section, click on Library
 
 
 ![](https://github.com/lerer/cic2-workshop/blob/main/images/006/nav-to-actions-lib.png?raw=true)   
@@ -35,7 +35,7 @@ Let’s get started!
 
 > **Note**:exclamation: - make sure it is showing the “**Login / Post Login**” Trigger
 
-####4. Paste the code into your action
+#### 4. Paste the code into your action
 
 ```javascript
 /**
@@ -85,7 +85,7 @@ exports.onExecutePostLogin = async (event, api) => {
 We are now going to include the action in the login flow.
 
 
-![](https://github.com/lerer/cic2-workshop/blob/main/images/006/login-flows-button.png?raw=true)   
+![](https://github.com/lerer/cic2-workshop/blob/main/images/006/login-flow-button.png?raw=true)   
 
 
 

@@ -65,4 +65,4 @@ If all went well, you will be presented with MFA challange when you try to login
 
 
 #### 5. Disable MFA
-In order to make it easy for the next Challange, you can remove the Organization metadata to disable the MFA
+In order to make it easy for the next Challange, you may want to remove the Organization metadata to disable the MFA

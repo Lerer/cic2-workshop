@@ -1,6 +1,6 @@
 ## 6.1 Enable MFA factors
 
-###Let’s enable TOTP for MFA 
+### Let’s enable TOTP for MFA 
 
 1. In Okta CIC, click on **Security** -> **Multi-factor Auth** 
 

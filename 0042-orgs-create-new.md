@@ -1,6 +1,7 @@
 ## 4.2 Create an Organization and add an Admin user in the Dashboard
 
-**Step 1:** Navigate to [Organizations](https://manage.auth0.com/#/organizations)
+**Step 1:** Navigate to [Organizations](https://manage.auth0.com/#/organizations)      
+      
 **Step 2:** Click create an Organization
 
 ![](https://github.com/lerer/cic2-workshop/blob/main/images/004/create-org-start.png?raw=true)
@@ -47,7 +48,7 @@
 - Select the **`Admin`** role we created earlier, and press Assign Role
 
 
-![](https://github.com/lerer/cic2-workshop/blob/main/images/004/assign-admin-roles.png?raw=true)
+![](https://github.com/lerer/cic2-workshop/blob/main/images/004/assign-admin-role.png?raw=true)
 
 
 **Step 7:** Add a Connection to your Organization

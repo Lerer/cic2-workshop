@@ -7,3 +7,5 @@ Welcome to the first practical exercise of your Okta training course! In this ex
 By the end of this exercise, you’ll have a customisable login to the SPA and the ability to view the JSON Web Tokens (JWTs) which contain the Access and ID tokens provided by Okta CIC.
 
 **Let’s get started!**
+
+Test live update

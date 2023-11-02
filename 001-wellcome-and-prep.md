@@ -1,0 +1,358 @@
+# Wellcome the B2B Customer Identity Bootcamp Lab
+
+## 1.0 Intro to Okta B2B Customer Identity Bootcamp Lab
+
+You are now all set up! It's time to set up your first application now.
+
+Welcome to the first practical exercise of your Okta training course! In this exercise, we’ll be creating a single-page application (SPA) in Glitch which will act as the user interface (UI) for the learner. The SPA will use Okta CIC for user authentication purposes, and we’ll configure the Okta CIC tenant to provide authentication services using OpenID Connect (OIDC) for the application.
+
+By the end of this exercise, you’ll have a customisable login to the SPA and the ability to view the JSON Web Tokens (JWTs) which contain the Access and ID tokens provided by Okta CIC.
+
+**Let’s get started!**
+
+
+## 1.1 Glitch app
+
+In this first task, we will use the Glitch platform to deploy a custom SPA to serve as the user interface (UI) for the learner. Once the SPA has been deployed, we'll move onto the next task where we will leverage Okta CIC's management console to set up the SPA in your CIC tenant.
+
+
+#### 1. Copy the template app
+ 
+Go to the template app in <https://glitch.com/edit/#!/cic2-workshop>
+
+
+#### 2. Click on Remix… 
+
+Remixing will give you a copy of the project that you can edit in your own account. Glitch will assign a new, randomly generated name to your project, and a Glitch URL. For example: **sable-inquistive-honesty**. 
+
+![](https://github.com/lerer/cic2-workshop/blob/main/images/001/remix.png?raw=true")
+
+
+#### 3. Rename the project 
+
+Click Settings. Then click Edit Project Details and enter a new PROJECT NAME. Your app name should also include your PERSONAL TAG and the month and day in this format: cic2-<MONTH-DAY>-<PERSONAL-TAG> .
+For example: cic2-aug29-johndoe
+
+Click on Edit project details. 
+
+
+![](https://github.com/lerer/cic2-workshop/blob/main/images/001/edit-project.png?raw=true")
+
+
+⁠Change the name and save. 
+
+
+![](https://github.com/lerer/cic2-workshop/blob/main/images/001/new-project-name.png?raw=true")
+
+
+#### 4. Launch the remixed Glitch application 
+
+At the bottom of the browser page, click the Preview link then click Preview in a new window. 
+
+
+![](https://github.com/lerer/cic2-workshop/blob/main/images/001/preview-project.png?raw=true")
+
+
+You will see a message asking you to procced to the next challenge.
+
+
+![](https://github.com/lerer/cic2-workshop/blob/main/images/001/confirmation-message.png?raw=true")
+
+
+#### ⁠5. Write down the URL! 
+
+Copy the URL of your Glitch application from your browser, for instance: **`https://cic2-johndoe-aug29.glitch.me`**
+
+
+#### 6. Congratulations 
+
+You have now completed the first part of the challenge by deploying a custom UI application in the Glitch platform.
+
+
+Now that your application is running, let’s integrate it with Okta CIC to bring Identities in.
+
+
+## 1.2 CIC App
+
+
+In this task, we will utilize the Okta CIC Management Dashboard to set up the Glitch UI application within Okta CIC.
+
+#### 1. Open your CIC management dashboard 
+
+Your tenant’s management url should be similar with: `https://manage.auth0.com/dashboard/<REGION>/<TENANT NAME>`, but you can access even more convenient via <a href="https://manage.auth0.com" target="_blank">https://manage.auth0.com</a>.
+
+
+#### 2. Expand the Applications Menu 
+
+![](https://github.com/lerer/cic2-workshop/blob/main/images/001/expand-app-menu.png?raw=true")
+
+
+#### ⁠3. Create an App 
+
+![](https://github.com/lerer/cic2-workshop/blob/main/images/001/create-app.png?raw=true")
+
+
+
+#### 4. Name it and classify it 
+Name your app as `Dashboard` and select as application type: `Single Page Web Application`. 
+
+![](https://github.com/lerer/cic2-workshop/blob/main/images/001/app-class-selection.png?raw=true)
+
+
+
+#### ⁠5. Click on Create 
+
+![](https://github.com/lerer/cic2-workshop/blob/main/images/001/create-button.png?raw=true)
+
+
+
+
+
+#### 6. Click the settings tab 
+
+![](https://github.com/lerer/cic2-workshop/blob/main/images/001/settings-tab.png?raw=true)
+
+
+
+
+#### ⁠7. Update the allowed URLs 
+
+:bangbang: IMPORTANT These values must be populated:
+
+**1. Application Login URI**
+**2. Allowed Callback URLs**
+**3. Allowed Logout URLs**
+**4. Allowed Web Origins**
+
+Use the URL of your Glitch application.
+
+For Application Login URI, add `https://<your Glitch app domain>/api/login`. See the example in the screenshot below.
+
+For callback, logout and web origins, you can also use `https://*.glitch.me` for this lab, though we would not recommend that for your production application!
+
+
+:warning: Whilst it is possible to use wildcards as in the image bellow, please note that it is not a good practice as the CIC application could be triggered by any app under the Glitch domain.
+
+
+![](https://github.com/lerer/cic2-workshop/blob/main/images/001/app-url-settings.png?raw=true)
+
+
+#### 8. Find and copy the app details
+
+We will need to update the Glitch app with the domain and the client ID generated by CIC.
+
+
+![](https://github.com/lerer/cic2-workshop/blob/main/images/001/app-details.png?raw=true)
+
+
+**⁠Note that the dashboard has a handy copy icon.**
+
+![](https://github.com/lerer/cic2-workshop/blob/main/images/001/copy-button.png?raw=true)
+
+
+
+#### 9. Save Changes 
+
+Scroll all the way to the bottom and click on “Save Changes”. 
+
+![](https://github.com/lerer/cic2-workshop/blob/main/images/001/save-changes.png?raw=true)
+
+
+
+#### 10.  CIC now knows your app! 
+
+This task generated a CIC application, you now have:
+- Client ID
+- CIC Domain to use in your Glitch App. We will use those in the next step to bring an actual login into our application.
+
+
+
+## 1.3 Update Glitch App
+
+In this task, we will integrate CIC with our Glitch Application.
+
+In Glitch, go to the source code page of your Glitch application and in the left menu panel under Files, go to "src" folder. Once you are there, click to modify the file `auth_config.json`.
+
+![](https://github.com/lerer/cic2-workshop/blob/main/images/001/auth-config.png?raw=true")
+
+
+Then:
+- Set the **`domain`** value to your CIC domain (the value that you got in the previous step)
+- Set the **`clientId`** value to your CIC application ID (the value that you got in the previous step)
+- Don’t touch the **`audience`** for now, we will do that later
+  
+
+
+**NOTE**: Glitch auto-saves so there is no save button.
+
+**That’s it!** The CIC SPA SDK is already embedded into your application, so all that’s left to do is testing. All we had to do was put in some configuration. Please go to the next step to test your login.
+
+**(Optional):** If you would like to learn more about the following topics in this task, please see the following: [Add Login to your Single Page Application](https://auth0.com/docs/quickstart/spa/vanillajs/interactive). You can also see the CIC SDK in action by navigating in your Glitch application to public ➡ src ➡ index.js.
+
+
+
+## 1.4 Set up the CIC API
+
+#### 1. Open the Okta CIC Management Dashboard 
+Go to: manage.auth0.com.
+
+
+#### 2. Click on APIs 
+In the left menu panel, expand the Applications option and click APIs. 
+
+![](https://github.com/lerer/cic2-workshop/blob/main/images/001/api-menu.png?raw=true)
+
+
+#### 3. Click on Create API 
+
+![](https://github.com/lerer/cic2-workshop/blob/main/images/001/create-api-button.png?raw=true)
+
+
+#### 4. Create an API 
+- Set the Name value to: `Dashboard API`
+- Set the Identifier value to: `api://dashboardapi/`
+- **Click on Create.** 
+
+![](https://github.com/lerer/cic2-workshop/blob/main/images/001/create-api.png?raw=true)
+
+
+#### 5. Let's create some permissions
+Go to `Permissions` tab and create these permissions:
+
+![](https://github.com/lerer/cic2-workshop/blob/main/images/001/permissions-tab.png?raw=true)
+
+
+⁠Use the permission names given below and add any relevant description.
+
+- invite:users
+- setup:sso
+- view:members
+- view:stats
+- read:connections
+
+
+![](https://github.com/lerer/cic2-workshop/blob/main/images/001/add-permissions.png?raw=true)
+
+
+### 6. Congratulations, you’ve completed task 1.4 :) 
+   
+A custom API has now been setup in your Okta CIC tenant.
+
+
+
+## 1.5 Update Glitch APP with API details
+
+#### 1. Update the API configuration 
+In Glitch, go to the source code page of your Glitch API application and in the left menu panel under **Files**, open `src` folder and click `auth_config.json`.
+
+
+#### 2. Modify auth_config.json 
+- Set the `audience` value to `api://dashboardapi/`
+
+The end result should look like this:
+
+![](https://github.com/lerer/cic2-workshop/blob/main/images/001/auth-config-api.png?raw=true)
+
+
+
+#### 3. Done! 
+There is nothing else to see at this point, but these steps were necessary to start with the third challenge.
+
+In this challenge, you set up a custom API within your Okta CIC tenant to enable the creation of OAuth access tokens used for accessing secured API endpoints
+
+
+## 1.6 Create Management API client
+
+In this section, you will setup your app to speak to the Auth0 Management API.
+
+> _The Auth0 Management API is a collection of endpoints to complete administrative tasks programmatically and should be used by back-end servers or trusted parties._
+
+**Why do we need this?**
+In the app you are building, we will offer the ability for users to manage their team members. We will control this ability with Role Based Access Control. We'll come to that in a challenge.
+
+
+**How does it work?**
+⁠
+![](https://github.com/lerer/cic2-workshop/blob/main/images/001/diagram.png?raw=true)
+
+
+
+### Step 1: Create a Management API client
+1. Go to `Applications` on the Dashboard and click `Create Application`
+2. Use a relevant name. For example: `Management API client`
+3. Select `Machine to Machine Applciations` as the application type and click `Create`
+4. Select `Auth0 Management API` from the dropdown
+⁠
+![](https://github.com/lerer/cic2-workshop/blob/main/images/001/mgmt-api-select.png?raw=true)
+
+
+5. Select `All` permissions and click `Authorize`.    
+   **Important:exclamation:**: In a real project, you should only enable necessary permissions to the client. For today, we will keep it simple.
+
+![](https://github.com/lerer/cic2-workshop/blob/main/images/001/auth-all.png?raw=true)
+
+
+6. Go to `Settings` tab and find the `Client ID` and `Client Secret`.      
+   :point_right: We will now copy these over to the Glitch App.⁠
+
+![](https://github.com/lerer/cic2-workshop/blob/main/images/001/mgmt-api-client-details.png?raw=true)
+
+
+### Step 2: Update Glitch App's environment variables
+1. Go to your Glitch app, under files, select `.env` file
+2. Copy the `Client ID` value from the previous step to the `AUTH0_API_ID` field
+3. Copy the `Client Secret` value from the previous step to the `AUTH0_API_CLIENT_SECRET` field.
+
+![](https://github.com/lerer/cic2-workshop/blob/main/images/001/glitch-env.png?raw=true)
+
+
+### Good Job!
+That's it! Now your Glitch App can interact with the Auth0 Management API.
+⁠This uses the **Node Auth0 SDK** which makes it easy to interact with the Managment API.
+
+⁠You can check it out here: https://github.com/auth0/node-auth0
+
+
+## 1.7 Login
+
+In this section, you will test your custom application and validate that your test user can authenticate successfully.
+
+> __Note:__ To avoid any problems, this __should__ be done on a different browser session than the one you have been using. Opening an incognito tab is the easiest way to do so.
+
+#### 1. Open your glitch app 
+Launch a new browser profile or incognito tab, paste in the URL from your Glitch Preview Page and then click on `Login`.
+⁠
+![](https://github.com/lerer/cic2-workshop/blob/main/images/001/login-button.png?raw=true)
+
+
+#### 2. Click on Sign up 
+Since you do not have an account, create a new user. 
+
+![](https://github.com/lerer/cic2-workshop/blob/main/images/001/signup-link.png?raw=true)
+
+Any credentials would do (as long as you remember them), for example:
+
+```
+Email = example@atko.email
+Password = Cic2-workshop
+```
+
+![](https://github.com/lerer/cic2-workshop/blob/main/images/001/signup.png?raw=true)
+
+
+#### ⁠3. That’s it! 
+If successful, you will see:
+- An updated profile icon in the upper right.
+- When you click on the profile icon, you will see a dropdown.
+- Click on the links `ID Token` and `Access Token`. This will open jwt.io and display the contents of the JWT tokens.
+⁠
+![](https://github.com/lerer/cic2-workshop/blob/main/images/001/token-links.png?raw=true)
+
+
+#### 4. Discuss about the tokens 
+The token is opaque, but the user data is a JSON object. Why is that?
+⁠
+![](https://github.com/lerer/cic2-workshop/blob/main/images/001/jwtio.png?raw=true)
+
+
+

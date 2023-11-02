@@ -1,6 +1,5 @@
-# Organization based - Flexible Security
 
-## 6.0 Intro to flexible security
+# Intro to flexible security
 
 ### Actions
 Actions are one of the cornerstones to Okta CIC’s overall extensibility. With Actions, you can add essential custom logic to your login and identity flows specific to your needs. Actions also allow you to connect external integrations that enhance your overall extensibility experience.   
@@ -22,7 +21,7 @@ For the purpose of the Challenge we will need to follow these steps
 Let’s get started!
 
 
-## 6.1 Enable MFA factors
+# Enable MFA factors
 
 ### Let’s enable TOTP for MFA 
 
@@ -73,7 +72,7 @@ Learn more about the following topics mentioned in this task:
       
 Congratulations, you’ve completed task 6.1 by enabling Multi-factor Authentication in our Okta CIC tenant with a policy to not show a multi-factor authentication by default.
 
-## 6.2 Trigger MFA for specific Organizations
+# Trigger MFA for specific Organizations
 
 Actions are one of the key flexibility which drives many options within Okta CIC’s overall extensibility. With Actions, you can add essential custom logic to your login and other identity flows specific to your needs. 
 
@@ -193,7 +192,7 @@ The above Action you just included in the login flow will run on authentication.
 let’s test out our new MFA policy in the next section.
 
 
-## 6.3 Test your MFA Policy
+# Test your MFA Policy
 
 
 For this section we simply need to pick the organization we want to enable MFA as a policy.   

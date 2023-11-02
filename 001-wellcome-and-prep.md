@@ -1,6 +1,5 @@
-# Wellcome the B2B Customer Identity Bootcamp Lab
 
-## 1.0 Intro to Okta B2B Customer Identity Bootcamp Lab
+# Intro to Okta B2B Customer Identity Bootcamp Lab
 
 You are now all set up! It's time to set up your first application now.
 
@@ -11,7 +10,7 @@ By the end of this exercise, you’ll have a customisable login to the SPA and t
 **Let’s get started!**
 
 
-## 1.1 Glitch app
+# Glitch app
 
 In this first task, we will use the Glitch platform to deploy a custom SPA to serve as the user interface (UI) for the learner. Once the SPA has been deployed, we'll move onto the next task where we will leverage Okta CIC's management console to set up the SPA in your CIC tenant.
 
@@ -72,7 +71,7 @@ You have now completed the first part of the challenge by deploying a custom UI 
 Now that your application is running, let’s integrate it with Okta CIC to bring Identities in.
 
 
-## 1.2 CIC App
+# CIC App
 
 
 In this task, we will utilize the Okta CIC Management Dashboard to set up the Glitch UI application within Okta CIC.
@@ -167,7 +166,7 @@ This task generated a CIC application, you now have:
 
 
 
-## 1.3 Update Glitch App
+# Update Glitch App
 
 In this task, we will integrate CIC with our Glitch Application.
 
@@ -191,7 +190,7 @@ Then:
 
 
 
-## 1.4 Set up the CIC API
+# Set up the CIC API
 
 #### 1. Open the Okta CIC Management Dashboard 
 Go to: manage.auth0.com.
@@ -240,7 +239,7 @@ A custom API has now been setup in your Okta CIC tenant.
 
 
 
-## 1.5 Update Glitch APP with API details
+# Update Glitch APP with API details
 
 #### 1. Update the API configuration 
 In Glitch, go to the source code page of your Glitch API application and in the left menu panel under **Files**, open `src` folder and click `auth_config.json`.
@@ -261,7 +260,7 @@ There is nothing else to see at this point, but these steps were necessary to st
 In this challenge, you set up a custom API within your Okta CIC tenant to enable the creation of OAuth access tokens used for accessing secured API endpoints
 
 
-## 1.6 Create Management API client
+# Create Management API client
 
 In this section, you will setup your app to speak to the Auth0 Management API.
 
@@ -313,7 +312,7 @@ That's it! Now your Glitch App can interact with the Auth0 Management API.
 ⁠You can check it out here: https://github.com/auth0/node-auth0
 
 
-## 1.7 Login
+# Login
 
 In this section, you will test your custom application and validate that your test user can authenticate successfully.
 

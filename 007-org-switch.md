@@ -1,6 +1,5 @@
-# Organizations Switcher
 
-## 7.0 Intro to Organization Switcher
+# Intro to Organization Switcher
 
 
 ### Enabling collaboration across organizations
@@ -23,7 +22,7 @@ Note - additional supporting documentation to the following Challenge can be fou
 Let's Start!
 
 
-## 7.1 Invite a user to two different organizations
+# Invite a user to two different organizations
 
 #### 1. Create additional Organization
 For the purpose of this challenge please follow the steps in **Challenge 4** to add a second organization.
@@ -59,7 +58,7 @@ Once you done, click the **`Submit`** button
 
 
 
-## 7.2 Accept the user membership invitation
+# Accept the user membership invitation
 
 ### You can use one of the following options to accept the user invitation:
 1. Login to your email and accept the invitation from your email
@@ -101,7 +100,7 @@ If all went well, you will now redirected to the login screen 
 - Otherwise, if you just created your second Organization - Proceed to the next (and final) section
 
 
-## 7.3 Test switching between organizations
+# Test switching between organizations
 
 The last part of the challange, is testing our setup - can we login once and switch Organization as a function within our application?
 

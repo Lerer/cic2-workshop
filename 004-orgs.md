@@ -1,6 +1,5 @@
-# Organizations
 
-## 4.0 Introduction to Organizations 
+# Introduction to Organizations 
 
 ![](https://github.com/lerer/cic2-workshop/blob/main/images/004/orgs-logo.jpeg?raw=true)
 
@@ -32,7 +31,7 @@
 
 
 
-## 4.1 Setting up Organizations
+# Setting up Organizations
 
 #### Configure an Application to Use Organisations
 - Click **Applications** --> **Application** from the left side menu
@@ -59,7 +58,7 @@
 
 
 
-## 4.2 Create an Organization and add an Admin user in the Dashboard
+# Create an Organization and add an Admin user in the Dashboard
 
 **Step 1:** Navigate to [Organizations](https://manage.auth0.com/#/organizations)      
       
@@ -133,7 +132,7 @@
 ⁠Now you have an Organization with an Admin user. Let's got to next section.
 
 
-## 4.3 Manage users via the app as an Admin
+# Manage users via the app as an Admin
 
 In this section you will manage the users who are "members" of your organization
 

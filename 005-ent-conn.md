@@ -1,6 +1,5 @@
-# Enteprise Connections
 
-## 5.0 Intro to Setting up Federated Logins (Enteprise Connections) for your business customers
+# Intro to Setting up Federated Logins (Enteprise Connections) for your business customers
 
 
 - Auth0 provides Enterprise connections to authenticate users in an external, federated identity provider (IdP) such as Okta, Azure AD, Google Workspace, PingFederate, and more.
@@ -18,7 +17,7 @@
 ![](https://github.com/lerer/cic2-workshop/blob/main/images/005/ent-conn-logo.png?raw=true)
 
 
-## 5.1 Create an Okta tenant for Federation
+# Create an Okta tenant for Federation
 
 To simulate the setup of a federated connection, we've created an Okta Tennt tool so we can setup federation for your organisation, this will simulate an Enteprise Connection with a customer using Okta as their IDP but your customers could easily have a Azure AD, Google Workspace etc as their IDP.
 
@@ -56,7 +55,7 @@ To simulate the setup of a federated connection, we've created an Okta Tennt too
 ###Good job!
 Let's go to the next section.
 
-## 5.2 Setting up the Enterprise Connection for your Application
+# Setting up the Enterprise Connection for your Application
 
 Let's setup the Okta SSO/federation for your app for the organization now.      
 ⁠
@@ -104,7 +103,7 @@ Let's setup the Okta SSO/federation for your app for the organization now.
 We will enable the connection for our organization in the next section.
 
 
-## 5.3 Enabling the connection for your Organization
+# Enabling the connection for your Organization
 
 Let’s add the connection you created to a new organisation
 
@@ -129,7 +128,7 @@ Let’s add the connection you created to a new organisation
 ![](https://github.com/lerer/cic2-workshop/blob/main/images/005/save-enabled-conn.png?raw=true)   
 
 
-## 5.4 Test login via the Okta SSO
+# Test login via the Okta SSO
 
 Let's test out the login!
 

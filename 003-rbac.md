@@ -1,6 +1,5 @@
-# Role based Access Control
 
-## 3.0 Intro to Role Based Access Control (RBAC)
+# Intro to Role Based Access Control (RBAC)
 
 
 Role-based access control (RBAC) refers to the idea of assigning permissions to users based on their role within an organization. It offers a simple, manageable approach to access management that is less prone to error than assigning permissions to users individually.
@@ -16,7 +15,7 @@ In this challenge, you will create 2 roles:
 
 
 
-## 3.1 Create Roles and assign permissions
+# Create Roles and assign permissions
 
 ### Step 1: Enable RBAC
 

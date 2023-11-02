@@ -18,7 +18,7 @@ In this challenge, you will create 2 roles:
 
 ## 3.1 Create Roles and assign permissions
 
-### Step1: Enable RBAC
+### Step 1: Enable RBAC
 
 Let's enable Role Based Access Control (RBAC) for our API first.
 1. Navigate to **Applications** > **APIs** on the sidebar
@@ -37,7 +37,7 @@ Let's enable Role Based Access Control (RBAC) for our API first.
 
 
 
-### Step2: Create Roles
+### Step 2: Create Roles
 
 1. Navigate to **User Management** -> **Roles** in the Auth0 dashboard.
 

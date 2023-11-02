@@ -33,5 +33,5 @@ To simulate the setup of a federated connection, we've created an Okta Tennt too
 
 
 
-###Good job!
+### Good job!
 Let's go to the next section.

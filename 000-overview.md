@@ -18,5 +18,5 @@ Join us on this workshop to explore advanced techniques, discover insider tips, 
 - How to enable self-service onboarding and off-boarding of business customers
 - How to implement role-based access control
 - How to implement Organization based logic (using actions) such as personalize security
-- How to user our Organization switcher feature we released not long ago
+- How to use our Organization switcher feature we released not long ago
 
